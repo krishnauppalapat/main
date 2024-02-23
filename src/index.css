@@ -1,3 +1,4 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 .main-card{
   display:flex;
   flex-wrap: wrap;
@@ -16,3 +17,13 @@
   height:100px;
   color:black
 }
+.cartimg{
+  position: absolute;
+  font-size: 50px;
+  top: 10px;
+  right: 10px;
+
+}
+
+  
+  

@@ -3,7 +3,6 @@ import React from 'react'
 const ProductsCard = ({cartItems}) => {
   return (
     <div>
-      <i className="bi bi-cart4 cartShape"></i>
       <ul>
         {
            cartItems?.map((item)=>{
