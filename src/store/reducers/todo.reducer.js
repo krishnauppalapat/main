@@ -1,11 +1,13 @@
 const initialState={
     todos:[
-        
-    ]
+
+    ],
+    filteredTodos:[]
 }
 function todoReducer(state=initialState,action){
+    state.filteredTodos=[...state.todos]
     if(action.type==='ADDTASK'){
-        return{...state,todos:[...state.todos,action.payload]}
+        return{...state,todos:[...state.todos,{title:action.payload,status:false}],filteredTodos:[...state.todos,{title:action.payload,status:false}]}
     }
     if(action.type==='DELETE'){
         // console.log(action.type)
@@ -13,8 +15,13 @@ function todoReducer(state=initialState,action){
 
     }
     if(action.type==='DONE'){
-        let temp={...state.todos};
+        // let t=state.todos.find((e,i)=>i===action.payload)
+        state.todos[action.payload].status=true
+       return {...state,todos:[...state.todos]}
         
+    }
+    if(action.type==='NOTDONE'){
+        return{...state,filteredTodos:[...state.todos.todos.filter(todo=>!todo.status)]}
     }
     return state;
 }
