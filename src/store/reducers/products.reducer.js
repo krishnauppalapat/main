@@ -4,7 +4,7 @@ const initialState={
     cart:[]
 }
 const productsReducer=function(state=initialState,action){
-    if(action.payload==='ADDTOCART'){
+    if(action.type==='ADDTOCART'){
         return{...state,cart:[...state.cart,action.payload]}
     }
     return state
