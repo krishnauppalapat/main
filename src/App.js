@@ -1,10 +1,12 @@
+import React from 'react';
+import ProductsData from './ProductsData';
 
-import './App.css';
-
-function App() {
+export function App() {
+ 
   return (
-    <div className="App">
-      fghjk
+    <div className='App'>
+      <ProductsData/>
+    
     </div>
   );
 }
