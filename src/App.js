@@ -1,10 +1,12 @@
 
 import './App.css';
+import Select from './select';
+
 
 function App() {
   return (
-    <div className="App">
-      fghjk
+    <div>
+    <Select/>
     </div>
   );
 }
